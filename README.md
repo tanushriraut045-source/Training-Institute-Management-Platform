@@ -127,59 +127,6 @@ MySQL 8+
 Git
 VS Code or another code editor
 
-##Validation & Business Rules:
-The backend validates core operations before modifying database records.
-Examples include:
-
-Required fields must be provided.
-Student records must exist before creating related attendance, enrollment, or payment records.
-Course records must exist before creating related enrollments, attendance, or payments.
-Trainer references are validated before course assignment.
-User email addresses must be unique.
-Passwords are stored using secure hashing.
-Foreign key constraints maintain relational integrity.
-Invalid record IDs return appropriate API errors.
-
-##Error Handling:
-The application handles common operational errors including:
-
-Invalid request data
-Missing required fields
-Invalid authentication credentials
-Duplicate email registration
-Non-existent student records
-Non-existent trainer records
-Non-existent course records
-Invalid enrollment references
-Invalid attendance references
-Invalid payment references
-Database operation failures
-
-API responses use appropriate HTTP status codes and JSON response messages.
-
-##Testing:
-The application can be tested at three levels:
-Frontend Testing
-Login workflow
-CRUD interfaces
-Form validation
-Navigation
-User interaction
-API Testing
-Authentication endpoints
-CRUD endpoints
-Invalid request handling
-Database operations
-Foreign key validation
-Database Testing
-Table creation
-Primary keys
-Foreign keys
-Data insertion
-Data updates
-Data deletion
-Referential integrity
-
 ##Future Enhancements:
 The platform can be extended with:
 Online payment gateway integration
