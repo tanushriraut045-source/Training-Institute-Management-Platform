@@ -119,62 +119,6 @@ The primary objectives of the platform are to:
 | Styling           | CSS          |
 | Version Control   | Git / GitHub |
 
-
-##Project Structure:
-Training-Institute-Management-Platform/
-│
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── AttendanceManagement.jsx
-│   │   │   ├── CourseManagement.jsx
-│   │   │   ├── EnrollmentManagement.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── PaymentManagement.jsx
-│   │   │   ├── StudentManagement.jsx
-│   │   │   └── TrainerManagement.jsx
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── package.json
-│   └── vite.config.js
-│
-├── server/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   ├── attendanceController.js
-│   │   ├── authController.js
-│   │   ├── courseController.js
-│   │   ├── enrollmentController.js
-│   │   ├── paymentController.js
-│   │   ├── studentController.js
-│   │   └── trainerController.js
-│   ├── routes/
-│   │   ├── attendanceRoutes.js
-│   │   ├── authRoutes.js
-│   │   ├── courseRoutes.js
-│   │   ├── enrollmentRoutes.js
-│   │   ├── paymentRoutes.js
-│   │   ├── studentRoutes.js
-│   │   └── trainerRoutes.js
-│   ├── server.js
-│   ├── package.json
-│   └── .env
-│
-├── database/
-│   ├── schema.sql
-│   └── sample_data.sql
-│
-├── screenshots/
-│   └── Application screenshots
-│
-├── .gitignore
-└── README.md
-
 ##Getting Started
 Prerequisites:
 Make sure the following software is installed:
