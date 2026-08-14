@@ -149,5 +149,6 @@ Automated scheduled reports
 ##Repository
 GitHub:
 https://github.com/tanushriraut045-source/Training-Institute-Management-Platform
+
 ##License
 This project is developed for educational, internship evaluation, and demonstration purposes.
