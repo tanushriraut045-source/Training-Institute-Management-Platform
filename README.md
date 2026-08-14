@@ -103,46 +103,6 @@ The primary objectives of the platform are to:
 - Store transaction references
 - Update and delete payment records
 
-### Dashboard
-
-The application provides a centralized interface for accessing major institute management modules and monitoring operational information.
-
----
-
-## Application Workflow
-
-```text
-                    User Authentication
-                           │
-                           ▼
-                       Dashboard
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-        ▼                  ▼                  ▼
-     Students           Trainers           Courses
-        │                                     │
-        └──────────────┐       ┌──────────────┘
-                       ▼       ▼
-                    Enrollments
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-        Attendance            Payments
-
-##Core Business Flow
-Student Registration
-        ↓
-Course Selection
-        ↓
-Enrollment
-        ↓
-Attendance Tracking
-        ↓
-Payment Tracking
-        ↓
-Course Progress / Status
-
 ##Technology Stack
 
 | Layer             | Technology   |
@@ -158,32 +118,6 @@ Course Progress / Status
 | API Architecture  | REST         |
 | Styling           | CSS          |
 | Version Control   | Git / GitHub |
-
-##System Architecture
-
-┌───────────────────────────────┐
-│        React Frontend         │
-│                               │
-│  Login • Dashboard • CRUD UI  │
-└───────────────┬───────────────┘
-                │
-                │ REST API / JSON
-                ▼
-┌───────────────────────────────┐
-│      Node.js + Express        │
-│                               │
-│ Routes → Controllers → Logic  │
-└───────────────┬───────────────┘
-                │
-                │ mysql2
-                ▼
-┌───────────────────────────────┐
-│          MySQL Database       │
-│                               │
-│ Users • Students • Trainers   │
-│ Courses • Enrollments         │
-│ Attendance • Payments         │
-└───────────────────────────────┘
 
 ##Project Structure:
 Training-Institute-Management-Platform/
@@ -251,7 +185,6 @@ VS Code or another code editor
 
 ##Validation & Business Rules:
 The backend validates core operations before modifying database records.
-
 Examples include:
 
 Required fields must be provided.
