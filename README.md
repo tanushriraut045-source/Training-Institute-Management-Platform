@@ -129,3 +129,202 @@ The application provides a centralized interface for accessing major institute m
              ┌─────────┴─────────┐
              ▼                   ▼
         Attendance            Payments
+
+##Core Business Flow
+Student Registration
+        ↓
+Course Selection
+        ↓
+Enrollment
+        ↓
+Attendance Tracking
+        ↓
+Payment Tracking
+        ↓
+Course Progress / Status
+
+##Technology Stack
+
+| Layer             | Technology   |
+| ----------------- | ------------ |
+| Frontend          | React.js     |
+| Build Tool        | Vite         |
+| Backend           | Node.js      |
+| API Framework     | Express.js   |
+| Database          | MySQL        |
+| Database Driver   | mysql2       |
+| Authentication    | JWT          |
+| Password Security | bcrypt       |
+| API Architecture  | REST         |
+| Styling           | CSS          |
+| Version Control   | Git / GitHub |
+
+##System Architecture
+
+┌───────────────────────────────┐
+│        React Frontend         │
+│                               │
+│  Login • Dashboard • CRUD UI  │
+└───────────────┬───────────────┘
+                │
+                │ REST API / JSON
+                ▼
+┌───────────────────────────────┐
+│      Node.js + Express        │
+│                               │
+│ Routes → Controllers → Logic  │
+└───────────────┬───────────────┘
+                │
+                │ mysql2
+                ▼
+┌───────────────────────────────┐
+│          MySQL Database       │
+│                               │
+│ Users • Students • Trainers   │
+│ Courses • Enrollments         │
+│ Attendance • Payments         │
+└───────────────────────────────┘
+
+##Project Structure:
+Training-Institute-Management-Platform/
+│
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── AttendanceManagement.jsx
+│   │   │   ├── CourseManagement.jsx
+│   │   │   ├── EnrollmentManagement.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── PaymentManagement.jsx
+│   │   │   ├── StudentManagement.jsx
+│   │   │   └── TrainerManagement.jsx
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── attendanceController.js
+│   │   ├── authController.js
+│   │   ├── courseController.js
+│   │   ├── enrollmentController.js
+│   │   ├── paymentController.js
+│   │   ├── studentController.js
+│   │   └── trainerController.js
+│   ├── routes/
+│   │   ├── attendanceRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── courseRoutes.js
+│   │   ├── enrollmentRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   ├── studentRoutes.js
+│   │   └── trainerRoutes.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── database/
+│   ├── schema.sql
+│   └── sample_data.sql
+│
+├── screenshots/
+│   └── Application screenshots
+│
+├── .gitignore
+└── README.md
+
+##Getting Started
+Prerequisites:
+Make sure the following software is installed:
+Node.js 18+
+npm
+MySQL 8+
+Git
+VS Code or another code editor
+
+##Validation & Business Rules:
+The backend validates core operations before modifying database records.
+
+Examples include:
+
+Required fields must be provided.
+Student records must exist before creating related attendance, enrollment, or payment records.
+Course records must exist before creating related enrollments, attendance, or payments.
+Trainer references are validated before course assignment.
+User email addresses must be unique.
+Passwords are stored using secure hashing.
+Foreign key constraints maintain relational integrity.
+Invalid record IDs return appropriate API errors.
+
+##Error Handling:
+The application handles common operational errors including:
+
+Invalid request data
+Missing required fields
+Invalid authentication credentials
+Duplicate email registration
+Non-existent student records
+Non-existent trainer records
+Non-existent course records
+Invalid enrollment references
+Invalid attendance references
+Invalid payment references
+Database operation failures
+
+API responses use appropriate HTTP status codes and JSON response messages.
+
+##Testing:
+The application can be tested at three levels:
+Frontend Testing
+Login workflow
+CRUD interfaces
+Form validation
+Navigation
+User interaction
+API Testing
+Authentication endpoints
+CRUD endpoints
+Invalid request handling
+Database operations
+Foreign key validation
+Database Testing
+Table creation
+Primary keys
+Foreign keys
+Data insertion
+Data updates
+Data deletion
+Referential integrity
+
+##Future Enhancements:
+The platform can be extended with:
+Online payment gateway integration
+Automated email and SMS notifications
+Student performance tracking
+Certificate generation
+PDF and Excel report generation
+Advanced dashboard analytics
+Trainer performance analytics
+Student progress tracking
+Cloud deployment
+Cloud database integration
+Document and file management
+Automated attendance reports
+Audit logging
+Multi-institute support
+Advanced role-based access control
+Automated scheduled reports
+
+##Repository
+GitHub:
+https://github.com/tanushriraut045-source/Training-Institute-Management-Platform
+
+##License
+This project is developed for educational, internship evaluation, and demonstration purposes.
