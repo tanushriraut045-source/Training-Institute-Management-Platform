@@ -119,8 +119,7 @@ The primary objectives of the platform are to:
 | Styling           | CSS          |
 | Version Control   | Git / GitHub |
 
-##Getting Started
-Prerequisites:
+##Prerequisites:
 Make sure the following software is installed:
 Node.js 18+
 npm
@@ -203,6 +202,5 @@ Automated scheduled reports
 ##Repository
 GitHub:
 https://github.com/tanushriraut045-source/Training-Institute-Management-Platform
-
 ##License
 This project is developed for educational, internship evaluation, and demonstration purposes.
